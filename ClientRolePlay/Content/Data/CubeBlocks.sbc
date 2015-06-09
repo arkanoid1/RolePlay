@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Definitions xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <CubeBlocks>
+    <Definition xsi:type="MyObjectBuilder_MedicalRoomDefinition">
+      <Id>
+        <TypeId>MedicalRoom</TypeId>
+        <SubtypeId>LargeMedicalRoom</SubtypeId>
+      </Id>
+      <DisplayName>DisplayName_Block_MedicalRoom</DisplayName>
+      <Icon>Textures\GUI\Icons\Cubes\medical_room.dds</Icon>
+      <CubeSize>Large</CubeSize>
+      <BlockTopology>TriangleMesh</BlockTopology>
+      <Size x="2" y="1" z="2" />
+      <ModelOffset x="0" y="0" z="0" />
+      <Model>Models\Cubes\Large\MedicalRoom2.mwm</Model>
+      <IdleSound>BlockMedical</IdleSound>
+      <ProgressSound>BlockMedicalProgress</ProgressSound>
+      <Components>
+        <Component Subtype="InteriorPlate" Count="220" />
+        <Component Subtype="Construction" Count="80" />
+        <Component Subtype="MetalGrid" Count="80" />
+        <Component Subtype="SmallTube" Count="20" />
+        <Component Subtype="LargeTube" Count="5" />
+        <Component Subtype="Display" Count="10" />
+        <Component Subtype="Computer" Count="10" />
+        <Component Subtype="Medical" Count="15" />
+        <Component Subtype="InteriorPlate" Count="20" />
+      </Components>
+      <CriticalComponent Subtype="Medical" Index="0" />
+      <MountPoints>
+        <MountPoint Side="Top" StartX="0.2" StartY="0.1" EndX="0.8" EndY="0.8" />
+        <MountPoint Side="Bottom" StartX="0.2" StartY="1.2" EndX="0.8" EndY="2" />
+      </MountPoints>
+      <BuildProgressModels>
+        <Model BuildPercentUpperBound="0.33" File="Models\Cubes\Large\MedicalRoomConstruction_1.mwm" />
+        <Model BuildPercentUpperBound="0.66" File="Models\Cubes\Large\MedicalRoomConstruction_2.mwm" />
+        <Model BuildPercentUpperBound="1.00" File="Models\Cubes\Large\MedicalRoomConstruction_3.mwm" />
+      </BuildProgressModels>
+      <BlockPairName>MedicalRoom</BlockPairName>
+      <EdgeType>Light</EdgeType>
+      <BuildTimeSeconds>50</BuildTimeSeconds>
+      <DamageEffectId>214</DamageEffectId>
+    </Definition>
+
+  </CubeBlocks>
+  <BlockPositions>
+    <!-- Region Row 0-->
+    <BlockPosition>
+      <Name>MedicalRoom</Name>
+      <Position>
+        <X>3</X>
+        <Y>4</Y>
+      </Position>
+    </BlockPosition>
+  </BlockPositions>
+</Definitions>
